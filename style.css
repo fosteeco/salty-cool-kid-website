@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  font-family: 'Knewave';
+  /* font-size: 5rem; */
+  letter-spacing: 5px;
+}
+header img.avatar {
+  border-radius: 50%;
+  width: 150px;
+  border: 5px solid #000;
+  margin-right: 10px;
+}
+
+body {
+  font-family: 'Roboto', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  /* background: linear-gradient(#fff100, #ff9999, #9999ff); */
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  font-size: 36px;
+  width: 80vw;
+  max-width: 800px;
+}
+nav a {
+  text-decoration: none;
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border: 3px solid #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  outline: none;
+  color: #000;
+}
+nav a:hover,
+nav a:focus {
+  box-shadow: rgba(0, 0, 254, 0.4) 5px 5px, rgba(0, 0, 254, 0.3) 10px 10px,
+    rgba(0, 0, 254, 0.2) 15px 15px, rgba(0, 0, 254, 0.1) 20px 20px,
+    rgba(0, 0, 254, 0.05) 25px 25px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+
+nav a:hover i,
+nav a:hover span.text,
+nav a:focus i,
+nav a:focus span.text {
+  transform: translateY(-10%);
+}
+
+nav a:hover span.text,
+nav a:focus span.text {
+  font-weight: bold;
+}
+
+nav a span.text {
+  font-family: 'Knewave';
+  text-transform: uppercase;
+}
+nav a:visited {
+  color: #000;
+  text-decoration: none;
+}
+nav a i,
+nav a span.text {
+  margin-right: 5px;
+  transition: all 0.6s ease;
+}
+.fa-youtube {
+  color: red;
+}
+.fa-instagram {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fab {
+  /* font-size: 3rem; */
+}
+
+.tiktok-container {
+  position: relative;
+}
+.tiktok-container::before {
+  font-family: 'Font Awesome 5 Brands';
+  content: '\e07b';
+  color: #25f5ef;
+  top: 0%;
+  left: -3%;
+  z-index: -1;
+  position: absolute;
+}
+.tiktok-container::after {
+  font-family: 'Font Awesome 5 Brands';
+  content: '\e07b';
+  color: #ff2d55;
+  left: 4%;
+  top: 7%;
+  z-index: -2;
+  position: absolute;
+}
+
+.fa-discord {
+  color: #5864f3;
+}
+
+@media screen and (max-width: 760px) {
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  nav {
+    width: 90vw;
+  }
+}
